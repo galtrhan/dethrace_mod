@@ -35,7 +35,7 @@ $(BINARY): pyproject.toml src/drmod/cli.py src/drmod/__main__.py
 		--output-filename=$(APP) \
 		--output-dir=$(DIST_DIR) \
 		--assume-yes-for-downloads \
-		drmod
+		src/drmod
 	@if command -v $(UPX) >/dev/null 2>&1; then \
 		$(UPX) --best --lzma $(BINARY); \
 		echo "UPX compressed $(BINARY)"; \
